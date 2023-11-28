@@ -155,10 +155,10 @@ public class MenuItem extends javax.swing.JPanel {
             public void run() {
                 for (int i = 0; i <getSubMenu().size(); i++) {
                     sleep();
-                    getSubMenu().get(i).setVisible(false);
+                    getSubMenu().get(i).setVisible(true);
                     
                 }
-                showing= false;
+                showing= true;
                 getParent().repaint();
                 getParent().revalidate();
             }
