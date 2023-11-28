@@ -54,11 +54,10 @@ public class FormLogin extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
-        BTN_Login.setBackground(new java.awt.Color(51, 153, 255));
+        BTN_Login.setBackground(new java.awt.Color(32, 201, 151));
         BTN_Login.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
-        BTN_Login.setForeground(new java.awt.Color(255, 255, 255));
         BTN_Login.setText("LOGIN");
         BTN_Login.setBorder(null);
         BTN_Login.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -70,13 +69,15 @@ public class FormLogin extends javax.swing.JFrame {
 
         Title.setFont(new java.awt.Font("Z003", 3, 48)); // NOI18N
         Title.setForeground(new java.awt.Color(0, 102, 51));
-        Title.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventoryapp/img/icons8-books-100.png"))); // NOI18N
+        Title.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventoryapp/img/icons8-books-100_1.png"))); // NOI18N
 
-        Password.setBackground(new java.awt.Color(255, 255, 255));
-        Password.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 153, 255)));
+        Password.setBackground(new java.awt.Color(51, 51, 51));
+        Password.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(32, 201, 151), 1, true));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventoryapp/img/icons8-password-30_2.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventoryapp/img/icons8-password-key-30.png"))); // NOI18N
 
+        Pswd.setBackground(new java.awt.Color(51, 51, 51));
+        Pswd.setForeground(new java.awt.Color(255, 255, 255));
         Pswd.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Pswd.setText("Password");
         Pswd.setBorder(null);
@@ -102,8 +103,8 @@ public class FormLogin extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Pswd, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(Pswd, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(50, Short.MAX_VALUE))
         );
         PasswordLayout.setVerticalGroup(
             PasswordLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -114,11 +115,14 @@ public class FormLogin extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        Username.setBackground(new java.awt.Color(255, 255, 255));
-        Username.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 153, 255)));
+        Username.setBackground(new java.awt.Color(51, 51, 51));
+        Username.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(32, 201, 151), 1, true));
+        Username.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventoryapp/img/icons8-customer-30.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventoryapp/img/icons8-user-shield-30.png"))); // NOI18N
 
+        User.setBackground(new java.awt.Color(51, 51, 51));
+        User.setForeground(new java.awt.Color(255, 255, 255));
         User.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         User.setText("Username");
         User.setBorder(null);
@@ -149,8 +153,8 @@ public class FormLogin extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(User, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(User, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(50, Short.MAX_VALUE))
         );
         UsernameLayout.setVerticalGroup(
             UsernameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -161,7 +165,7 @@ public class FormLogin extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        BTN_exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventoryapp/img/icons8-exit-35.png"))); // NOI18N
+        BTN_exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventoryapp/img/icons8-exit-35_1.png"))); // NOI18N
         BTN_exit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BTN_exitMouseClicked(evt);
@@ -169,9 +173,10 @@ public class FormLogin extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("NATS", 1, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("BOOKS INVENTORY APP");
 
-        IMG_Books.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventoryapp/img/clip-library-2.png"))); // NOI18N
+        IMG_Books.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventoryapp/img/3d-casual-life-books-and-cup.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -183,41 +188,40 @@ public class FormLogin extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Username, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(145, 145, 145)
+                        .addComponent(Title))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(jLabel3))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(90, 90, 90)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(Password, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(BTN_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(37, 37, 37))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel3)
-                        .addGap(27, 27, 27)))
+                            .addComponent(Username, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BTN_Login, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
                 .addComponent(IMG_Books)
-                .addContainerGap(51, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(157, 157, 157)
-                .addComponent(Title)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addComponent(BTN_exit)
-                .addGap(25, 25, 25)
-                .addComponent(Title)
-                .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
+                        .addComponent(BTN_exit)
+                        .addGap(63, 63, 63)
+                        .addComponent(IMG_Books))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(78, 78, 78)
+                        .addComponent(Title)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(BTN_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(IMG_Books))
+                        .addGap(12, 12, 12)
+                        .addComponent(BTN_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(52, Short.MAX_VALUE))
         );
 
@@ -250,6 +254,14 @@ public class FormLogin extends javax.swing.JFrame {
 
     private void BTN_LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_LoginActionPerformed
         // TODO add your handling code here:
+        MenuUtama menu = new MenuUtama();
+        menu.setVisible(true);
+        menu.revalidate();
+        
+        
+        dispose();
+        
+        
     }//GEN-LAST:event_BTN_LoginActionPerformed
 
     private void UserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UserActionPerformed

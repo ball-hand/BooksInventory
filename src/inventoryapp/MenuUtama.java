@@ -35,6 +35,8 @@ public class MenuUtama extends javax.swing.JFrame {
     private void initComponents() {
 
         pn_navbar = new javax.swing.JPanel();
+        Logo = new javax.swing.JLabel();
+        copy = new javax.swing.JLabel();
         pn_sidebar = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         pn_menu = new javax.swing.JPanel();
@@ -42,29 +44,49 @@ public class MenuUtama extends javax.swing.JFrame {
         pn_utama = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(51, 51, 51));
 
-        pn_navbar.setBackground(new java.awt.Color(0, 51, 204));
+        pn_navbar.setBackground(new java.awt.Color(32, 201, 151));
+        pn_navbar.setForeground(new java.awt.Color(255, 255, 255));
+
+        Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventoryapp/img/icons8-books-100_1.png"))); // NOI18N
+
+        copy.setFont(new java.awt.Font("NATS", 1, 36)); // NOI18N
+        copy.setForeground(new java.awt.Color(0, 0, 0));
+        copy.setText("Books Inventory app ");
 
         javax.swing.GroupLayout pn_navbarLayout = new javax.swing.GroupLayout(pn_navbar);
         pn_navbar.setLayout(pn_navbarLayout);
         pn_navbarLayout.setHorizontalGroup(
             pn_navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 802, Short.MAX_VALUE)
+            .addGroup(pn_navbarLayout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addComponent(Logo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(copy, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(355, 355, 355))
         );
         pn_navbarLayout.setVerticalGroup(
             pn_navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(pn_navbarLayout.createSequentialGroup()
+                .addContainerGap(21, Short.MAX_VALUE)
+                .addGroup(pn_navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Logo)
+                    .addGroup(pn_navbarLayout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(copy)))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         getContentPane().add(pn_navbar, java.awt.BorderLayout.PAGE_START);
 
-        pn_sidebar.setBackground(new java.awt.Color(255, 255, 255));
+        pn_sidebar.setBackground(new java.awt.Color(51, 51, 51));
         pn_sidebar.setPreferredSize(new java.awt.Dimension(250, 410));
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setBorder(null);
 
-        pn_menu.setBackground(new java.awt.Color(255, 255, 255));
+        pn_menu.setBackground(new java.awt.Color(51, 51, 51));
         pn_menu.setLayout(new javax.swing.BoxLayout(pn_menu, javax.swing.BoxLayout.Y_AXIS));
         jScrollPane1.setViewportView(pn_menu);
 
@@ -83,9 +105,9 @@ public class MenuUtama extends javax.swing.JFrame {
 
         getContentPane().add(pn_sidebar, java.awt.BorderLayout.LINE_START);
 
-        pn_content.setBackground(new java.awt.Color(255, 255, 255));
+        pn_content.setBackground(new java.awt.Color(51, 51, 51));
 
-        pn_utama.setBackground(new java.awt.Color(255, 255, 255));
+        pn_utama.setBackground(new java.awt.Color(51, 51, 51));
         pn_utama.setLayout(new java.awt.BorderLayout());
 
         javax.swing.GroupLayout pn_contentLayout = new javax.swing.GroupLayout(pn_content);
@@ -143,6 +165,8 @@ public class MenuUtama extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Logo;
+    private javax.swing.JLabel copy;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel pn_content;
     private javax.swing.JPanel pn_menu;
@@ -154,7 +178,7 @@ public class MenuUtama extends javax.swing.JFrame {
     private void execute() {   
         ImageIcon iconMaster = new ImageIcon(getClass().getResource("/inventoryapp/img/icons8-pie-chart-20.png"));
         ImageIcon iconSub =new ImageIcon(getClass().getResource("/inventoryapp/img/icons8-pie-chart-20.png"));
-        
+        ImageIcon iconHome = new ImageIcon(getClass().getResource("/inventoryapp/img/icons8-home-20.png"));
         MenuItem masBarang1 = new MenuItem(null, true, iconSub, "Barang 1", null);
         MenuItem masBarang2= new MenuItem(null, true, iconSub, "Barang 2", null);
         MenuItem masBarang3 = new MenuItem(null, true, iconSub, "Barang 3", null);
@@ -164,14 +188,14 @@ public class MenuUtama extends javax.swing.JFrame {
         MenuItem masTransaksi2 = new MenuItem(null, true, iconSub, "Transaksi2", null);
         MenuItem masTransaks3 = new MenuItem(null, true, iconSub, "Transaksi3", null);
         
-        
+        MenuItem menuHome           = new MenuItem(iconHome, false , null  , "Home", null);
         MenuItem menuMaster          = new MenuItem(iconMaster, false, null, "Barang", null,masBarang1, masBarang2,masBarang3);
         MenuItem menuTransaksi      = new MenuItem(iconMaster, false, null, "Transaksi", null,masTransaksi1,masTransaksi2,masTransaks3);
         MenuItem menuReport         = new MenuItem(iconMaster, false, null, "Report", null);
     
     
     
-        addMenu(menuMaster,menuTransaksi,menuReport);
+        addMenu(menuHome,menuMaster,menuTransaksi,menuReport);
     }
     
     private void addMenu(MenuItem...menu){
