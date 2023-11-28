@@ -90,6 +90,7 @@ public class MenuItem extends javax.swing.JPanel {
         lb_menuName.setFont(new java.awt.Font("NATS", 0, 15)); // NOI18N
         lb_menuName.setForeground(new java.awt.Color(255, 255, 255));
         lb_menuName.setText("Menu Item...");
+        lb_menuName.setPreferredSize(new java.awt.Dimension(60, 24));
 
         lb_icon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
