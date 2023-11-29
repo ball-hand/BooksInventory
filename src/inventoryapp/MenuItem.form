@@ -29,8 +29,8 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="lb_icon" min="-2" pref="43" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <Component id="lb_icon" min="-2" pref="37" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="32767" attributes="0"/>
               <Component id="lb_iconSub" min="-2" pref="33" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="lb_menuName" min="-2" pref="202" max="-2" attributes="0"/>
@@ -43,7 +43,7 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lb_menuName" pref="48" max="32767" attributes="0"/>
+                  <Component id="lb_menuName" max="32767" attributes="0"/>
                   <Component id="lb_iconSub" alignment="0" max="32767" attributes="0"/>
                   <Component id="lb_icon" alignment="0" max="32767" attributes="0"/>
               </Group>

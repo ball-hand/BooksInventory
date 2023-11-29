@@ -4,7 +4,10 @@
  */
 package inventoryapp;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import javax.swing.Action;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
@@ -45,6 +48,11 @@ public class MenuUtama extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(51, 51, 51));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         pn_navbar.setBackground(new java.awt.Color(32, 201, 151));
         pn_navbar.setForeground(new java.awt.Color(255, 255, 255));
@@ -52,7 +60,6 @@ public class MenuUtama extends javax.swing.JFrame {
         Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventoryapp/img/icons8-books-100_1.png"))); // NOI18N
 
         copy.setFont(new java.awt.Font("NATS", 1, 36)); // NOI18N
-        copy.setForeground(new java.awt.Color(0, 0, 0));
         copy.setText("Books Inventory app ");
 
         javax.swing.GroupLayout pn_navbarLayout = new javax.swing.GroupLayout(pn_navbar);
@@ -112,9 +119,9 @@ public class MenuUtama extends javax.swing.JFrame {
         pn_content.setLayout(pn_contentLayout);
         pn_contentLayout.setHorizontalGroup(
             pn_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pn_contentLayout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
-                .addComponent(pn_utama, javax.swing.GroupLayout.DEFAULT_SIZE, 517, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pn_contentLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pn_utama, javax.swing.GroupLayout.DEFAULT_SIZE, 540, Short.MAX_VALUE)
                 .addContainerGap())
         );
         pn_contentLayout.setVerticalGroup(
@@ -127,6 +134,16 @@ public class MenuUtama extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(812, 540));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+        pn_utama.add(new pn_home());
+        pn_utama.repaint();
+        pn_utama.revalidate();
+        
+        
+        
+    }//GEN-LAST:event_formWindowOpened
 
     /**
      * @param args the command line arguments
@@ -176,18 +193,47 @@ public class MenuUtama extends javax.swing.JFrame {
 
     private void execute() {   
         ImageIcon iconMaster = new ImageIcon(getClass().getResource("/inventoryapp/img/icons8-pie-chart-20.png"));
-        ImageIcon iconSub =new ImageIcon(getClass().getResource("/inventoryapp/img/icons8-pie-chart-20.png"));
-        ImageIcon iconHome = new ImageIcon(getClass().getResource("/inventoryapp/img/icons8-home-20.png"));
-        MenuItem masBarang1 = new MenuItem(null, true, iconSub, "Barang 1", null);
+        ImageIcon iconSub =new ImageIcon(getClass().getResource("/inventoryapp/img/icons8-book-25.png"));
+        ImageIcon iconHome = new ImageIcon(getClass().getResource("/inventoryapp/img/icons8-home-25.png"));
+        
+        ImageIcon barang1 = new ImageIcon(getClass().getResource(""));//clear this
+        ImageIcon barang2=new ImageIcon(getClass().getResource(""));//clear this 
+        ImageIcon barang3= new ImageIcon(getClass().getResource(""));//clear this
+        
+        ImageIcon transaksi1= new ImageIcon(getClass().getResource(""));//clear this
+        ImageIcon transaksi2 = new ImageIcon(getClass().getResource(""));//clear this
+        ImageIcon transaksi3 = new ImageIcon(getClass().getResource(""));// clear this
+        
+        
+        
+        MenuItem masBarang1 = new MenuItem(null, true, iconSub, "Barang 1", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                pn_utama.removeAll();
+                pn_utama.add(new fm_barang());
+                pn_utama.repaint();
+                pn_utama.revalidate();
+        
+            }
+        });
         MenuItem masBarang2= new MenuItem(null, true, iconSub, "Barang 2", null);
         MenuItem masBarang3 = new MenuItem(null, true, iconSub, "Barang 3", null);
         
         
-        MenuItem masTransaksi1 = new MenuItem(null, true, iconSub, "Transaksi1", null);
-        MenuItem masTransaksi2 = new MenuItem(null, true, iconSub, "Transaksi2", null);
-        MenuItem masTransaks3 = new MenuItem(null, true, iconSub, "Transaksi3", null);
+        MenuItem masTransaksi1 = new MenuItem(null, true, iconSub, "Transaksi 1", null);
+        MenuItem masTransaksi2 = new MenuItem(null, true, iconSub, "Transaksi 2", null);
+        MenuItem masTransaks3 = new MenuItem(null, true, iconSub, "Transaksi 3", null);
         
-        MenuItem menuHome           = new MenuItem(iconHome, false , null  , "Home", null);
+        MenuItem menuHome           = new MenuItem(iconHome, false , null  , "Home", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                pn_utama.removeAll();
+                pn_utama.add(new pn_home());
+                pn_utama.repaint();
+                pn_utama.revalidate();
+            
+            }
+        });
         MenuItem menuMaster          = new MenuItem(iconMaster, false, null, "Barang", null,masBarang1, masBarang2,masBarang3);
         MenuItem menuTransaksi      = new MenuItem(iconMaster, false, null, "Transaksi", null,masTransaksi1,masTransaksi2,masTransaks3);
         MenuItem menuReport         = new MenuItem(iconMaster, false, null, "Report", null);
